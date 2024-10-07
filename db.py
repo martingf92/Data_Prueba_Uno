@@ -1,32 +1,10 @@
-# db.py
-#import json
-
-#def guardar_producto(producto):
-#    with open('productos.json', 'a') as f:
-#        json.dump(producto.__dict__, f)
-#        f.write('\n')
-
-#def cargar_productos():
-#    productos = []
-#    try:
-#        with open('productos.json', 'r') as f:
-#            for line in f:
-#                datos = json.loads(line.strip())
-#                productos.append(datos)
-#    except FileNotFoundError:
-#        pass
-#    return productos
-
-
-
-
 import mysql.connector
 
 def conectar_bd():
     conexion = mysql.connector.connect(
         host="localhost",  # Cambia por tu host
         user="root",  # Cambia por tu usuario
-        password=" ",  # Cambia por tu contraseña
+        password="",  # Cambia por tu contraseña
         database="Datos"  # Cambia por tu base de datos
     )
     return conexion
